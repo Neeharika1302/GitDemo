@@ -28,8 +28,8 @@ public class ExtentRepo {
         driver.get("https://rahulshettyacademy.com/client/");
         System.out.println(driver.getTitle());
         test.fail("Results do not match");
-        System.out.println("Test Success");
         driver.close();
         extent.flush();
+        System.out.println("Test Success");
     }
 }
