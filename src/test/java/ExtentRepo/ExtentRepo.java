@@ -27,6 +27,7 @@ public class ExtentRepo {
         driver.manage().window().maximize();
         driver.get("https://rahulshettyacademy.com/client/");
         System.out.println(driver.getTitle());
+        test.fail("Results do not match");
         System.out.println("Test Success");
         driver.close();
         extent.flush();
