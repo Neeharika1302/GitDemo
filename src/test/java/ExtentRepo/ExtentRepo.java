@@ -32,4 +32,16 @@ public class ExtentRepo {
         extent.flush();
         System.out.println("Test Success");
     }
+    @Test
+    public void sampleTest1(){
+        ExtentTest test=extent.createTest("Sample Test");
+        WebDriver driver= new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.google.com");
+        System.out.println(driver.getTitle());
+        test.fail("Results do not match");
+        driver.close();
+        extent.flush();
+        System.out.println("Test Success");
+    }
 }
