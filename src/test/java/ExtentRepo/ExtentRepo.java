@@ -44,4 +44,16 @@ public class ExtentRepo {
         extent.flush();
         System.out.println("Test Success");
     }
+    @Test
+    public void sampleTest2(){
+        ExtentTest test=extent.createTest("Sample Test");
+        WebDriver driver= new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.udemy.com");
+        System.out.println(driver.getTitle());
+        test.fail("Results do not match");
+        driver.close();
+        extent.flush();
+        System.out.println("Test Success");
+    }
 }
